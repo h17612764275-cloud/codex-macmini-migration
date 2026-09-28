@@ -1,0 +1,62 @@
+[
+  {
+    "source": "H:\\【workspace】\\心绪岛\\mobile\\.expo",
+    "reason": "可再生Web构建/Expo缓存",
+    "kind": "directory"
+  },
+  {
+    "source": "H:\\【workspace】\\心绪岛\\mobile\\dist",
+    "reason": "可再生Web构建/Expo缓存",
+    "kind": "directory"
+  },
+  {
+    "source": "H:\\【workspace】\\心绪岛\\mobile\\node_modules",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.codex\\skills\\.system",
+    "reason": "由新电脑Codex重新提供的系统Skills",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.codex\\skills\\anysearch\\runtime.conf",
+    "reason": "机器配置或可能含凭据，Mac单独配置",
+    "kind": "file"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.codex\\skills\\geo-sleuth\\scripts\\__pycache__",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.codex\\skills\\project-graveyard\\scripts\\__pycache__",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.agents\\skills\\brand\\scripts\\tests\\__pycache__",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.agents\\skills\\design-system\\scripts\\tests\\__pycache__",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.agents\\skills\\impeccable\\scripts\\bin\\windows-x64\\impeccable.exe",
+    "reason": "Windows二进制或Python缓存，Mac重新安装",
+    "kind": "file"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.agents\\skills\\ui-ux-pro-max\\scripts\\__pycache__",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  },
+  {
+    "source": "C:\\Users\\Administra\\.codex\\plugins\\cache\\ponytail\\ponytail\\4.10.0\\.git",
+    "reason": "可重装依赖/缓存/Skill上游Git历史",
+    "kind": "directory"
+  }
+]

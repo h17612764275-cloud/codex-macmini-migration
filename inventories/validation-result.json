@@ -1,0 +1,17 @@
+{
+  "source_files_unchanged": true,
+  "copied_files": 4519,
+  "copied_bytes": 982835805,
+  "failures": [],
+  "token_pattern_candidates": [],
+  "toml_parse": "PASS",
+  "json_parse": "PASS",
+  "git_state_matches": "PASS",
+  "git_fsck": "PASS",
+  "mac_filename_collisions": "NONE",
+  "verifier_selfcheck": "PASS",
+  "skills": 196,
+  "roles": 265,
+  "project_core_files": 176,
+  "project_git_files": 43
+}

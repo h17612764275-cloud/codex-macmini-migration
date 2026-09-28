@@ -1,0 +1,20 @@
+# 参考片段：逐项合并，不覆盖 Mac 已有 config.toml。
+# 原 Windows 配置快照 2026-09-28；模型可用性以目标账户为准。
+model = "gpt-6-astra"
+model_reasoning_effort = "ultra"
+personality = "pragmatic"
+
+# 原机权限值，先在目标机确认范围，不自动启用：
+# approval_policy = "on-request"
+# sandbox_mode = "danger-full-access"
+
+# 仅当 Node/npx 在 Mac 可找到、且需要 Wigolo 时启用：
+# [mcp_servers.wigolo]
+# command = "npx"
+# args = ["-y", "wigolo"]
+
+# 安装 Mac 原生版后，用 command -v 得到实际绝对路径，再启用：
+# [mcp_servers.codebase-memory-mcp]
+# command = "/Users/你的用户名/.local/bin/codebase-memory-mcp"
+
+# node_repl、computer-use、浏览器工具由 Mac 桌面端管理，勿移植 Windows 配置。

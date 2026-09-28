@@ -1,0 +1,3401 @@
+{
+  "config": {
+    "model": "gpt-6-astra",
+    "model_reasoning_effort": "ultra",
+    "personality": "pragmatic",
+    "approval_policy": "on-request",
+    "sandbox_mode": "danger-full-access",
+    "service_tier": "default",
+    "model_context_window": 872000,
+    "model_auto_compact_token_limit": 800000,
+    "features": {
+      "js_repl": false,
+      "memories": true
+    },
+    "memories": {
+      "generate_memories": true,
+      "use_memories": true
+    },
+    "plugins": {
+      "visualize@openai-bundled": {
+        "enabled": true
+      },
+      "documents@openai-primary-runtime": {
+        "enabled": true
+      },
+      "spreadsheets@openai-primary-runtime": {
+        "enabled": true
+      },
+      "presentations@openai-primary-runtime": {
+        "enabled": true
+      },
+      "template-creator@openai-primary-runtime": {
+        "enabled": true
+      },
+      "pdf@openai-primary-runtime": {
+        "enabled": true
+      },
+      "ponytail@ponytail": {
+        "enabled": true
+      },
+      "codex-storyboard@codex-storyboard": {
+        "enabled": false
+      },
+      "remotion@openai-curated": {
+        "enabled": true
+      },
+      "codex-app-tools@openai-bundled": {
+        "enabled": true
+      },
+      "astra-advisor@astra-advisor": {
+        "enabled": true
+      },
+      "browser@openai-bundled": {
+        "enabled": true
+      },
+      "unified-computer-use@openai-bundled": {
+        "enabled": true
+      },
+      "chrome@openai-bundled": {
+        "enabled": true
+      },
+      "computer-use@openai-bundled": {
+        "enabled": true
+      }
+    },
+    "marketplaces": {
+      "openai-bundled": {
+        "source_type": "local",
+        "source": "\\\\?\\C:\\Users\\Administra\\.codex\\.tmp\\bundled-marketplaces\\openai-bundled"
+      },
+      "openai-primary-runtime": {
+        "source_type": "local",
+        "source": "\\\\?\\C:\\Users\\Administra\\.cache\\codex-runtimes\\codex-primary-runtime\\plugins\\openai-primary-runtime"
+      },
+      "ponytail": {
+        "last_updated": "2026-08-08T04:40:28Z",
+        "last_revision": "2ed6c52c9d7e5e56942508591085fd45dea277d3",
+        "source_type": "git",
+        "source": "https://github.com/DietrichGebert/ponytail.git"
+      },
+      "codex-storyboard": {
+        "last_updated": "2026-09-18T13:16:20Z",
+        "last_revision": "2ef84da702612e2a9a9abad5b77603313f43668f",
+        "source_type": "git",
+        "source": "https://github.com/Yuuhann1999/codex-storyboard.git"
+      },
+      "astra-advisor": {
+        "last_updated": "2026-09-18T13:16:07Z",
+        "last_revision": "c72d3280551f118eba51a5884e3971a0c0058aa6",
+        "source_type": "git",
+        "source": "https://github.com/DannyMac180/astra-advisor.git",
+        "ref": "main"
+      }
+    },
+    "desktop": {
+      "localeOverride": "zh-CN",
+      "appearanceTheme": "dark",
+      "sansFontSize": 15,
+      "codeFontSize": 12,
+      "defaultTerminalLocation": "right",
+      "notifications-turn-mode": "always",
+      "composerPlainTextMode": true,
+      "show-context-window-usage": true
+    },
+    "mcp_servers": {
+      "codebase-memory-mcp": {
+        "command": "C:/Users/Administra/.local/bin/codebase-memory-mcp.exe",
+        "args": null,
+        "enabled": true,
+        "env_names": []
+      },
+      "wigolo": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "wigolo"
+        ],
+        "enabled": true,
+        "env_names": []
+      },
+      "node_repl": {
+        "command": "C:\\Users\\Administra\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\b63ee7ee40c23b77\\bin\\node_repl.exe",
+        "args": [],
+        "enabled": true,
+        "env_names": [
+          "NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS",
+          "NODE_REPL_NODE_MODULE_DIRS",
+          "NODE_REPL_NODE_PATH",
+          "NODE_REPL_TRUSTED_CODE_PATHS",
+          "CODEX_HOME",
+          "BROWSER_USE_AVAILABLE_BACKENDS",
+          "BROWSER_USE_TINYSKY_ENABLED",
+          "NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER",
+          "NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME",
+          "BROWSER_USE_CODEX_APP_BUILD_FLAVOR",
+          "BROWSER_USE_CODEX_APP_VERSION",
+          "NODE_REPL_TRUSTED_SERVICES",
+          "SKY_CUA_NATIVE_PIPE",
+          "SKY_CUA_NATIVE_PIPE_DIRECTORY",
+          "CODEX_CLI_PATH",
+          "NODE_REPL_UNTRUSTED_ENV_ALLOWLIST"
+        ]
+      }
+    }
+  },
+  "plugins": [
+    {
+      "marketplace": "astra-advisor",
+      "directory_name": "astra-advisor",
+      "version": "0.2.0",
+      "name": "astra-advisor",
+      "description": "Codex-native dynamic orchestration with GPT-6 Astra as the primary advisor.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\astra-advisor\\astra-advisor\\0.2.0",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/orchestration/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "codex-storyboard",
+      "directory_name": "codex-storyboard",
+      "version": "0.6.7+codex.20260914224348",
+      "name": "codex-storyboard",
+      "description": "Start the local storyboard app, create and manage projects, plan B-roll motion with a confirmation gate, process image and video generation tasks, and return assets to Codex Storyboard.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\codex-storyboard\\codex-storyboard\\0.6.7+codex.20260914224348",
+      "configured": {
+        "enabled": false
+      },
+      "skill_paths": [
+        "skills/manage-storyboard-projects/SKILL.md",
+        "skills/process-storyboard-tasks/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "browser",
+      "version": "26.924.22138",
+      "name": "browser",
+      "description": "Browser / browser-use plugin\n\nAliases: @browser, @browser-use, browser-use, Browser, in-app browser.\n\nUse Browser, the ChatGPT in-app browser, when the user asks to open, inspect, navigate, test, click, type, or screenshot local web targets such as localhost, 127.0.0.1, ::1, file:// URLs, or the current in-app browser tab.\n\nAfter significant frontend changes to a local app, use Browser to open the relevant local target when it is known or obvious, unless the user asks for another browser tool.\n\nFor requests like \"open localhost:3000\" or \"open to localhost:4000\", navigate the in-app browser to http://localhost:3000 or http://localhost:4000.\n\nDo not satisfy explicit @browser or @browser-use requests with macOS `open`, shell commands, or generic web browsing unless the user asks for another browser tool or approves a fallback.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\browser\\26.924.22138",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "chrome",
+      "version": "26.924.22138",
+      "name": "chrome",
+      "description": "Chrome automation for tasks that depend on the user's existing Chrome state: tabs, logged-in sessions, cookies, extensions, and ChatGPT Chrome Extension setup. Prefer purpose-built connectors, APIs, or CLIs. If one fails due to missing or expired authentication, ask the user to reauthenticate or explicitly approve Chrome as a fallback.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\chrome\\26.924.22138",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "chrome",
+      "version": "latest",
+      "name": "chrome",
+      "description": "Chrome automation for tasks that depend on the user's existing Chrome state: tabs, logged-in sessions, cookies, extensions, and ChatGPT Chrome Extension setup. Prefer purpose-built connectors, APIs, or CLIs. If one fails due to missing or expired authentication, ask the user to reauthenticate or explicitly approve Chrome as a fallback.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\chrome\\latest",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "codex-app-tools",
+      "version": "0.1.5",
+      "name": "codex-app-tools",
+      "description": "Exposes Codex desktop app tools through one local MCP server.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\codex-app-tools\\0.1.5",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "computer-use",
+      "version": "26.924.22138",
+      "name": "computer-use",
+      "description": "Control desktop apps on Windows from ChatGPT through Computer Use.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\computer-use\\26.924.22138",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/computer-use/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "unified-computer-use",
+      "version": "26.924.22138",
+      "name": "unified-computer-use",
+      "description": "App-managed browser automation runtime.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\unified-computer-use\\26.924.22138",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-bundled",
+      "directory_name": "visualize",
+      "version": "1.0.41",
+      "name": "visualize",
+      "description": "Create interactive charts, maps, diagrams, simulations, 3D models, data explorers, and UI previews directly in Codex.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-bundled\\visualize\\1.0.41",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/visualize/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated",
+      "directory_name": "remotion",
+      "version": "bd2122cb",
+      "name": "remotion",
+      "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated\\remotion\\bd2122cb",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/remotion/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "app-69312da8e4dc81919370cb86fd172b6c",
+      "version": "9.0.0",
+      "name": "app-69312da8e4dc81919370cb86fd172b6c",
+      "description": "Adobe unlocks more ways to create and get work done from the conversation. Previously available as Photoshop, the Adobe connector now brings creativity and productivity capabilities across Creative Cloud and Acrobat. Describe what you want to make or change, and Adobe can help turn ideas, images, videos, and documents into polished outputs — from editing photos and creating PDFs to designing social assets, resizing videos, searching Creative Cloud assets, and generating data-driven documents.\nKey capabilities:\n\n* Retouch portraits or edit photos in bulk: Drop in photos and describe the look you want — adjust color, lighting, and tone; remove distractions and generate new elements; apply Lightroom presets; remove backgrounds; blur, crop, resize, and expand images.\n* Design from template: Start from an Express template, update text and colors, and then animate for social media or convert to PDF.\n* Refine video for any platform: Upload a horizontal clip and ask to reformat it for YouTube Shorts, Instagram Reels, or any platform. You can also stitch clips into a single sequence.\n* Search and organize creative work: Describe what you're looking for and surface assets from your Creative Cloud library — by subject, style, mood, or content — without browsing folders.\n* Work with PDFs and documents: Create and convert polished PDFs and documents.\n* Create data-driven documents: Describe your output and provide your data — the connector turns raw data or content into formatted, shareable PDFs, including badges, cards, catalogs, and more.\n\nYou can get started as a guest, and sign in with your Adobe account for more capabilities and tools, Creative Cloud storage, and saved work across sessions.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\app-69312da8e4dc81919370cb86fd172b6c\\9.0.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/adobe-batch-edit-photos/SKILL.md",
+        "skills/adobe-create-mockups/SKILL.md",
+        "skills/adobe-create-social-variations/SKILL.md",
+        "skills/adobe-design-from-template/SKILL.md",
+        "skills/adobe-edit-quick-cut/SKILL.md",
+        "skills/adobe-fonts/SKILL.md",
+        "skills/adobe-retouch-portraits/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "app-6944733e4ddc8191bd617f781ff93d51",
+      "version": "1.0.0",
+      "name": "app-6944733e4ddc8191bd617f781ff93d51",
+      "description": "Understand Your Day Through Personalized Astrology\n\nDiscover a deeper, more personal way to experience astrology with a fully personalized daily horoscope. Horoscope transforms planetary movements, moon phases, and cosmic shifts into clear insights about your emotions, decisions, and life patterns all calculated from your unique birth data.\nNo generic predictions. Connect the app, ask for a horoscope and we will create one based on precise planetary positions right now.\n\nEach daily horoscope reading explains:\n\n1. How today’s planetary transits affect your love life, career, health, and relationships\n2. A thoughtful daily reflection question to encourage mindfulness and growth\n3. What the current moon phase means for your mood, energy, and focus\n4. Three key highlights that define the tone of your day\n5. Your lucky color of the day\n\nAstrology becomes less abstract and more personal something you can reflect on and apply in your daily life.\n\nOur app is capable generating:\n\n- Personalized daily horoscopes based on planetary transits\n- A complete natal (birth) chart calculated from your exact birth details\n- Transit charts showing how current cosmic movements interact with your birth chart\n\nAll calculations are aligned with real astrological movement ensuring accuracy you can trust.\n\nConnect our app and enjoy:\n\nTruly Personalized Readings\nEvery insight is tailored to your birth chart, not just your sun sign.\n\nNatal & Transit Charts Made Clear\nExplore your astrological blueprint and see how today’s planets influence your life right now.\n\nFocus on Real Life Areas\nLove, career, health, and relationships explained in clear, relatable language.\n\nMoon Phase & Lucky Color Tracking\nAlign your actions with daily cosmic energy.\n\nDaily Reflection Question\nOne simple question each day to encourage awareness and personal growth.\n\nSimple, Beautiful Design\nA clean, modern interface that makes astrology easy to return to every day.\n\nNotice, understand and take action on your life patterns.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\app-6944733e4ddc8191bd617f781ff93d51\\1.0.0",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "app-698a098735908191989f5788d7ee317e",
+      "version": "6.0.0",
+      "name": "app-698a098735908191989f5788d7ee317e",
+      "description": "With Gamma, you can turn your ideas into polished, professional content directly inside ChatGPT. Whether you're drafting a pitch deck, marketing brief, or team update, Gamma helps you create beautiful, on-brand presentations, documents, social posts, and webpages, without leaving your workflow.\n\nYou can ask Gamma to:\n\n- \"Read this Gamma deck, <link_to_deck>\"\n- \"Turn this technical report into an executive summary.\"\n- \"Build a marketing brief for our cybersecurity offering. Adapt it to a non-technical audience.\"\n- \"Create a 4-slide pitch deck about a team offsite to Hawaii, add in some jokes.\"\n- \"Design a project proposal document with a dark theme.\" (Themes determine look and feel.)",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\app-698a098735908191989f5788d7ee317e\\6.0.0",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "app-69fdb9081018819193707354f21b366e",
+      "version": "3.0.0",
+      "name": "app-69fdb9081018819193707354f21b366e",
+      "description": "Mobbin is the industry standard in UI & UX design references for mobile apps, web apps, and websites. The platform serves millions of product builders and designers across the world to help them design better digital experiences. Connect Mobbin with ChatGPT to better research and explore UI & UX design ideas.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\app-69fdb9081018819193707354f21b366e\\3.0.0",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "app-69fde861d3988191a7157df33544f855",
+      "version": "1.0.0",
+      "name": "app-69fde861d3988191a7157df33544f855",
+      "description": "Tarot Reading is an interactive tarot app for personal insight, reflection, and intuitive exploration. Ask a question, choose your preferred tarot spread, pull the cards yourself, and receive a personalized reading based on your question and the cards you draw.\n\nThe app supports a one-card pull, two-card spread, three-card spread, and the deeper seven-card Horseshoe spread. Whether you are looking for a quick daily card, clarity around a specific situation, or a more detailed spread reading, Tarot Reading helps you explore the messages, themes, and symbolism of the cards in relation to your question.\n\nEach reading is tailored to your chosen spread and card selection, offering a thoughtful interpretation that can help you reflect on your emotions, choices, relationships, and current circumstances through the lens of tarot.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\app-69fde861d3988191a7157df33544f855\\1.0.0",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "build-web-apps",
+      "version": "0.1.2",
+      "name": "build-web-apps",
+      "description": "Build web apps with frontend asset design, browser testing, UI components, payments, and database guidance.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\build-web-apps\\0.1.2",
+      "configured": null,
+      "skill_paths": [
+        "skills/frontend-app-builder/SKILL.md",
+        "skills/frontend-testing-debugging/SKILL.md",
+        "skills/react-best-practices/SKILL.md",
+        "skills/shadcn-best-practices/SKILL.md",
+        "skills/stripe-best-practices/SKILL.md",
+        "skills/supabase-best-practices/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "canva",
+      "version": "16.0.0",
+      "name": "canva",
+      "description": "Bring your Canva design workflow into Codex and create, refine, and review designs through natural conversation.\n\nWhat Canva can do: \nCreate designs: Turn a brief, outline, or draft copy into a presentation, doc, poster, flyer, social post, resume, and more. \nGenerate images: Create photos, illustrations, icons, and graphics from a prompt, or restyle an image you already have. \nRemove backgrounds: Lift the subject out of an image onto a transparent background. Upload files: Bring attachments and files from your chat into Canva to use in your designs. \nResize for social media: Adapt a design for Facebook, Instagram, and LinkedIn in one step. \nBulk create: Generate multiple designs from spreadsheet data using a brand template. \nEdit designs: Update text, media, and formatting, or reposition and resize elements. \nGet design feedback: Receive structured feedback on visual hierarchy, layout, readability, consistency, and accessibility. \nImplement feedback: Review comment threads and apply clear, actionable changes. Brand check: Check colors, fonts, logo usage, and copy against your Brand Kit.\n\nOnce installed, describe what you want in plain language or invoke Canva directly with @Canva.\n\nTry prompts like:\n\n@Canva, create a pitch deck from this outline.\n@Canva, make an Instagram post announcing our Friday sale.\n@Canva, generate an illustration of a lighthouse at dawn.\n@Canva, remove the background from this photo.\n@Canva, upload this PDF and turn it into a presentation.\n@Canva, resize this design for social media.\n@Canva, create designs from this spreadsheet using my brand template.\n@Canva, update the headline in this design.\n@Canva, implement the feedback in the comment threads.\n@Canva, check this design against my Brand Kit.\nRequirements: Connect your Canva account to use the plugin. Bulk Create requires an eligible Canva Enterprise plan. Design and image generation use Canva AI credits.\n\nWant to take a more hands-on approach? Instantly open your design in Canva's powerful editor for the final touches.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\canva\\16.0.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/canva-brand-check/SKILL.md",
+        "skills/canva-branded-presentation/SKILL.md",
+        "skills/canva-bulk-create/SKILL.md",
+        "skills/canva-design-feedback/SKILL.md",
+        "skills/canva-edit-design/SKILL.md",
+        "skills/canva-implement-feedback/SKILL.md",
+        "skills/canva-resize-for-social-media/SKILL.md",
+        "skills/canva-translate-design/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "codex-security",
+      "version": "0.1.31",
+      "name": "codex-security",
+      "description": "Codex Security workflows for security scans, analysis, and investigation.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\codex-security\\0.1.31",
+      "configured": null,
+      "skill_paths": [
+        "skills/assess-patch-risk/SKILL.md",
+        "skills/attack-path-analysis/SKILL.md",
+        "skills/deep-security-scan/SKILL.md",
+        "skills/define-security-policy/SKILL.md",
+        "skills/finding-discovery/SKILL.md",
+        "skills/fix-finding/SKILL.md",
+        "skills/propose-security-hardening/SKILL.md",
+        "skills/security-diff-scan/SKILL.md",
+        "skills/security-scan/SKILL.md",
+        "skills/threat-model/SKILL.md",
+        "skills/track-findings/SKILL.md",
+        "skills/triage-finding/SKILL.md",
+        "skills/validation/SKILL.md",
+        "skills/verify-fix/SKILL.md",
+        "skills/vulnerability-writeup/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "data-analytics",
+      "version": "1.0.11",
+      "name": "data-analytics",
+      "description": "Answer product and business questions with data",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\data-analytics\\1.0.11",
+      "configured": null,
+      "skill_paths": [
+        "skills/analyze-data-quality/SKILL.md",
+        "skills/build-dashboard/SKILL.md",
+        "skills/build-report/SKILL.md",
+        "skills/convert-to-doc/SKILL.md",
+        "skills/convert-to-slides/SKILL.md",
+        "skills/create-data-context/SKILL.md",
+        "skills/design-kpis/SKILL.md",
+        "skills/gather-business-context/SKILL.md",
+        "skills/index/SKILL.md",
+        "skills/jupyter-notebooks/SKILL.md",
+        "skills/kpi-reporting/SKILL.md",
+        "skills/market-sizing/SKILL.md",
+        "skills/metric-diagnostics/SKILL.md",
+        "skills/product-business-analysis/SKILL.md",
+        "skills/publish-artifact-to-sites/SKILL.md",
+        "skills/report-to-pdf/SKILL.md",
+        "skills/schedule-refresh-jobs/SKILL.md",
+        "skills/share-artifact-summary/SKILL.md",
+        "skills/validate-data/SKILL.md",
+        "skills/visualize-data/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "fal",
+      "version": "1.1.0",
+      "name": "fal",
+      "description": "Your creative partner for AI image, video, audio, and 3D generation. Turn ideas into product photos, cinematic clips, social campaigns, voiceovers, and game assets with fal. Start with a prompt or reference image, get help choosing a model, and refine your creations through image editing and conversation.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\fal\\1.1.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/character-design/SKILL.md",
+        "skills/cinematography/SKILL.md",
+        "skills/commercial/SKILL.md",
+        "skills/fal-gamedev/SKILL.md",
+        "skills/fal-media/SKILL.md",
+        "skills/fal-models-catalog/SKILL.md",
+        "skills/fal-prompting/SKILL.md",
+        "skills/fal-recipes/SKILL.md",
+        "skills/fal-regenerate-3d/SKILL.md",
+        "skills/fal-workflow/SKILL.md",
+        "skills/fan-cam/SKILL.md",
+        "skills/marketing/SKILL.md",
+        "skills/model-routing/SKILL.md",
+        "skills/storytelling/SKILL.md",
+        "skills/ugc/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "figma",
+      "version": "13.0.0",
+      "name": "figma",
+      "description": "Bring your Figma workflows for creating, reviewing, and implementing designs into your ChatGPT and Codex conversations. Send your product screens to Figma where they become editable layers using your designs system components. Share these designs and collaborate with your team, or send them back to Codex to implement the designs in your codebase. You can also create and edit polished decks in Figma Slides, or generate diagrams in FigJam.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\figma\\13.0.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/figma-code-connect/SKILL.md",
+        "skills/figma-create-new-file/SKILL.md",
+        "skills/figma-design-to-code/SKILL.md",
+        "skills/figma-generate-design/SKILL.md",
+        "skills/figma-generate-diagram/SKILL.md",
+        "skills/figma-generate-library/SKILL.md",
+        "skills/figma-generative-plugins/SKILL.md",
+        "skills/figma-implement-motion/SKILL.md",
+        "skills/figma-shaders/SKILL.md",
+        "skills/figma-swiftui/SKILL.md",
+        "skills/figma-use/SKILL.md",
+        "skills/figma-use-figjam/SKILL.md",
+        "skills/figma-use-motion/SKILL.md",
+        "skills/figma-use-slides/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "github",
+      "version": "0.1.12-5f7cd798dc99",
+      "name": "github",
+      "description": "Inspect repositories, triage pull requests and issues, debug CI, and publish changes through a hybrid GitHub connector and CLI workflow.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\github\\0.1.12-5f7cd798dc99",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "gmail",
+      "version": "0.1.10",
+      "name": "gmail",
+      "description": "Work with Gmail using the configured Gmail app connector.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\gmail\\0.1.10",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "hugging-face",
+      "version": "1.0.0",
+      "name": "hugging-face",
+      "description": "Inspect models, datasets, Spaces, and research",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\hugging-face\\1.0.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/cli/SKILL.md",
+        "skills/community-evals/SKILL.md",
+        "skills/datasets/SKILL.md",
+        "skills/gradio/SKILL.md",
+        "skills/jobs/SKILL.md",
+        "skills/llm-trainer/SKILL.md",
+        "skills/paper-publisher/SKILL.md",
+        "skills/papers/SKILL.md",
+        "skills/trackio/SKILL.md",
+        "skills/transformers.js/SKILL.md",
+        "skills/vision-trainer/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "lovable",
+      "version": "3.0.0",
+      "name": "lovable",
+      "description": "Lovable builds and edits full-stack web apps from natural language. Describe an app and Lovable creates a project, writes the TypeScript, Tailwind, and shadcn/ui code, and returns a live preview you can watch build. Follow-up messages refine the app, and you can inspect the generated code and diffs, add a PostgreSQL database and third-party connectors, manage reusable project knowledge and skills, and publish the finished app to a public URL.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\lovable\\3.0.0",
+      "configured": null,
+      "skill_paths": []
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "notion",
+      "version": "0.1.8",
+      "name": "notion",
+      "description": "Notion workflows for implementation planning, research synthesis, meeting preparation, and knowledge capture.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\notion\\0.1.8",
+      "configured": null,
+      "skill_paths": [
+        "skills/notion-knowledge-capture/SKILL.md",
+        "skills/notion-meeting-intelligence/SKILL.md",
+        "skills/notion-research-documentation/SKILL.md",
+        "skills/notion-spec-to-implementation/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "openai-developers",
+      "version": "1.3.0",
+      "name": "openai-developers",
+      "description": "Build with OpenAI APIs, Agents API, Agents SDK, and ChatGPT Apps, and create and save OpenAI API keys from Codex.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\openai-developers\\1.3.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/agents/SKILL.md",
+        "skills/build-chatgpt-app/SKILL.md",
+        "skills/chatgpt-app-submission/SKILL.md",
+        "skills/openai-api-troubleshooting/SKILL.md",
+        "skills/openai-platform-api-key/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "openai-templates",
+      "version": "0.1.1",
+      "name": "openai-templates",
+      "description": "OpenAI default document, presentation, and spreadsheet templates.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\openai-templates\\0.1.1",
+      "configured": null,
+      "skill_paths": [
+        "skills/artifact-template-analytics-dashboard/SKILL.md",
+        "skills/artifact-template-business-review/SKILL.md",
+        "skills/artifact-template-design-report/SKILL.md",
+        "skills/artifact-template-experiment-analysis/SKILL.md",
+        "skills/artifact-template-financial-budget/SKILL.md",
+        "skills/artifact-template-investment-committee-memo/SKILL.md",
+        "skills/artifact-template-legal-memorandum/SKILL.md",
+        "skills/artifact-template-market-trends-report/SKILL.md",
+        "skills/artifact-template-minimal-letterhead/SKILL.md",
+        "skills/artifact-template-operating-calendar/SKILL.md",
+        "skills/artifact-template-operating-review/SKILL.md",
+        "skills/artifact-template-project-kickoff/SKILL.md",
+        "skills/artifact-template-project-tracker/SKILL.md",
+        "skills/artifact-template-sales-pipeline/SKILL.md",
+        "skills/artifact-template-simple-dark-mode/SKILL.md",
+        "skills/artifact-template-simple-light-mode/SKILL.md",
+        "skills/artifact-template-strategy-memorandum/SKILL.md",
+        "skills/artifact-template-system-design/SKILL.md",
+        "skills/artifact-template-team-alignment/SKILL.md",
+        "skills/artifact-template-three-statement-forecast/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "plugin-management",
+      "version": "0.1.0",
+      "name": "plugin-management",
+      "description": "Discover relevant plugins and manage app connections, permissions, and dependencies.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\plugin-management\\0.1.0",
+      "configured": null,
+      "skill_paths": [
+        "skills/plugin-management/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "product-design",
+      "version": "0.1.56",
+      "name": "product-design",
+      "description": "The Product Design plugin is built for turning early ideas into prototypes teams can review. It starts design and build work by confirming the brief, then helps teams explore product directions, audit user flows, prototype from a live URL, and make static screenshots interactive.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\product-design\\0.1.56",
+      "configured": null,
+      "skill_paths": [
+        "skills/audit/SKILL.md",
+        "skills/design-qa/SKILL.md",
+        "skills/get-context/SKILL.md",
+        "skills/ideate/SKILL.md",
+        "skills/image-to-code/SKILL.md",
+        "skills/index/SKILL.md",
+        "skills/research/SKILL.md",
+        "skills/share/SKILL.md",
+        "skills/url-to-code/SKILL.md",
+        "skills/user-context/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-curated-remote",
+      "directory_name": "sites",
+      "version": "0.1.71",
+      "name": "sites",
+      "description": "Build and deploy websites with Sites. Use of Sites is subject to the ChatGPT Sites Terms (https://openai.com/policies/chatgpt-sites-terms/), and you are responsible for your website content.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-curated-remote\\sites\\0.1.71",
+      "configured": null,
+      "skill_paths": [
+        "skills/sites-building/SKILL.md",
+        "skills/sites-hosting/SKILL.md",
+        "skills/sites-preview-troubleshooting/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-primary-runtime",
+      "directory_name": "documents",
+      "version": "26.904.11930",
+      "name": "documents",
+      "description": "Create and edit document artifacts in Codex, including Word files and Google Docs.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.904.11930",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/documents/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-primary-runtime",
+      "directory_name": "pdf",
+      "version": "26.904.11930",
+      "name": "pdf",
+      "description": "Read, create, inspect, render, and verify PDF files in Codex.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-primary-runtime\\pdf\\26.904.11930",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/pdf/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-primary-runtime",
+      "directory_name": "presentations",
+      "version": "26.904.11930",
+      "name": "presentations",
+      "description": "Create, edit, render, verify, and export presentation slide decks. Use when Codex needs to build or modify a deck, slidedeck, presentation deck, slide deck, slides, PowerPoint, Google Slides, PPT, PPTX, .ppt, or .pptx file.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-primary-runtime\\presentations\\26.904.11930",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/presentations/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-primary-runtime",
+      "directory_name": "spreadsheets",
+      "version": "26.904.11930",
+      "name": "spreadsheets",
+      "description": "Create, edit, analyze, visualize, render, and export spreadsheets, Microsoft Excel or Google Sheets-ready workbooks in Codex.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-primary-runtime\\spreadsheets\\26.904.11930",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/excel-live-control/SKILL.md",
+        "skills/spreadsheets/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "openai-primary-runtime",
+      "directory_name": "template-creator",
+      "version": "26.904.11930",
+      "name": "template-creator",
+      "description": "Create and update personal templates from files, Google Docs, Slides, and Sheets links, ImageGen or Product Design images, emails, Slack messages, and Site projects.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\openai-primary-runtime\\template-creator\\26.904.11930",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/template-creator/SKILL.md"
+      ]
+    },
+    {
+      "marketplace": "ponytail",
+      "directory_name": "ponytail",
+      "version": "4.10.0",
+      "name": "ponytail",
+      "description": "Lazy senior dev mode. Forces the simplest, shortest solution that actually works: YAGNI, stdlib first, no unrequested abstractions.",
+      "source_path": "C:\\Users\\Administra\\.codex\\plugins\\cache\\ponytail\\ponytail\\4.10.0",
+      "configured": {
+        "enabled": true
+      },
+      "skill_paths": [
+        "skills/ponytail/SKILL.md",
+        "skills/ponytail-audit/SKILL.md",
+        "skills/ponytail-debt/SKILL.md",
+        "skills/ponytail-gain/SKILL.md",
+        "skills/ponytail-help/SKILL.md",
+        "skills/ponytail-review/SKILL.md",
+        ".openclaw/skills/ponytail/SKILL.md",
+        ".openclaw/skills/ponytail-audit/SKILL.md",
+        ".openclaw/skills/ponytail-debt/SKILL.md",
+        ".openclaw/skills/ponytail-gain/SKILL.md",
+        ".openclaw/skills/ponytail-help/SKILL.md",
+        ".openclaw/skills/ponytail-review/SKILL.md"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "file": "3d-scene-developer.toml",
+      "name": "3D & Scene Developer",
+      "description": "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interactive web experiences using Cesium, ArcGIS Scene Viewer, and modern 3D web frameworks.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "accessibility-auditor.toml",
+      "name": "Accessibility Auditor",
+      "description": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design. Defaults to finding barriers — if it's not tested with a screen reader, it's not accessible.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "account-strategist.toml",
+      "name": "Account Strategist",
+      "description": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention. Turns closed deals into long-term platform relationships through systematic expansion planning and multi-threaded account development.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "accounts-payable-agent.toml",
+      "name": "Accounts Payable Agent",
+      "description": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across any payment rail — crypto, fiat, stablecoins. Integrates with AI agent workflows via tool calls.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ad-creative-strategist.toml",
+      "name": "Ad Creative Strategist",
+      "description": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta, Microsoft, and programmatic platforms. Bridges the gap between performance data and persuasive messaging.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "aeo-foundations-architect.toml",
+      "name": "AEO Foundations Architect",
+      "description": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "agentic-identity-trust-architect.toml",
+      "name": "Agentic Identity & Trust Architect",
+      "description": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments. Ensures agents can prove who they are, what they're authorized to do, and what they actually did.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "agentic-search-optimizer.toml",
+      "name": "Agentic Search Optimizer",
+      "description": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "agents-orchestrator.toml",
+      "name": "Agents Orchestrator",
+      "description": "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "aging-parent-care-companion.toml",
+      "name": "Aging Parent Care Companion",
+      "description": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ai-citation-strategist.toml",
+      "name": "AI Citation Strategist",
+      "description": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ai-data-remediation-engineer.toml",
+      "name": "AI Data Remediation Engineer",
+      "description": "\"Specialist in self-healing data pipelines — uses air-gapped local SLMs and semantic clustering to automatically detect, classify, and fix data anomalies at scale. Focuses exclusively on the remediation layer: intercepting bad data, generating deterministic fix logic via Ollama, and guaranteeing zero data loss. Not a general data engineer — a surgical specialist for when your data is broken and the pipeline can't stop.\"",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ai-engineer.toml",
+      "name": "AI Engineer",
+      "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems. Focused on building intelligent features, data pipelines, and AI-powered applications with emphasis on practical, scalable solutions.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ai-generated-code-security-auditor.toml",
+      "name": "AI-Generated Code Security Auditor",
+      "description": "Security reviewer for AI-generated and vibe-coded apps — hunts the hardcoded secrets, broken row-level security, and prompt-injection sinks that coding assistants ship by default, then drives a scan, fix, and rescan loop with honest, CWE-mapped findings.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "analytics-reporter.toml",
+      "name": "Analytics Reporter",
+      "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "anthropologist.toml",
+      "name": "Anthropologist",
+      "description": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method — builds culturally coherent societies that feel lived-in rather than invented",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "api-platform-engineer.toml",
+      "name": "API Platform Engineer",
+      "description": "Expert API platform engineer for public and partner APIs — contract-first design (OpenAPI/gRPC), versioning and deprecation policy, SDK generation, API gateway concerns (auth, rate limiting, quotas), and developer-portal DX.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "api-tester.toml",
+      "name": "API Tester",
+      "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "app-store-optimizer.toml",
+      "name": "App Store Optimizer",
+      "description": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "application-security-engineer.toml",
+      "name": "Application Security Engineer",
+      "description": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST integration, and developer security education that makes secure code the default.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "automation-governance-architect.toml",
+      "name": "Automation Governance Architect",
+      "description": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "autonomous-optimization-architect.toml",
+      "name": "Autonomous Optimization Architect",
+      "description": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and security guardrails against runaway costs.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "backend-architect.toml",
+      "name": "Backend Architect",
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "baidu-seo-specialist.toml",
+      "name": "Baidu SEO Specialist",
+      "description": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "behavioral-nudge-engine.toml",
+      "name": "Behavioral Nudge Engine",
+      "description": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "bilibili-content-strategist.toml",
+      "name": "Bilibili Content Strategist",
+      "description": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "bim-gis-specialist.toml",
+      "name": "BIM/GIS Specialist",
+      "description": "Integration specialist who bridges Building Information Modeling and Geographic Information Systems — Revit/IFC data conversion, indoor mapping, digital twin architecture, and facility management data models.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "blender-add-on-engineer.toml",
+      "name": "Blender Add-on Engineer",
+      "description": "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "blockchain-security-auditor.toml",
+      "name": "Blockchain Security Auditor",
+      "description": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, and comprehensive audit report writing for DeFi protocols and blockchain applications.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "book-co-author.toml",
+      "name": "Book Co-Author",
+      "description": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "bookkeeper-controller.toml",
+      "name": "Bookkeeper & Controller",
+      "description": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end close processes, and internal controls. Ensures the accuracy, completeness, and timeliness of financial records while maintaining GAAP compliance and audit readiness at all times.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "brand-guardian.toml",
+      "name": "Brand Guardian",
+      "description": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "business-strategist.toml",
+      "name": "Business Strategist",
+      "description": "Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth planning, organizational strategy, and strategic decision-making — translating complex market dynamics into clear, actionable strategies that create sustainable competitive advantage",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "carousel-growth-engine.toml",
+      "name": "Carousel Growth Engine",
+      "description": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes directly to feed via Upload-Post API with auto trending music, fetches analytics, and iteratively improves through a data-driven learning loop.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "cartography-designer.toml",
+      "name": "Cartography Designer",
+      "description": "Map aesthetics specialist who designs beautiful, readable, and effective maps — color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "change-management-consultant.toml",
+      "name": "Change Management Consultant",
+      "description": "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations, restructuring, culture transformation, and M&A integration — managing resistance, building adoption, and ensuring changes stick long after go-live",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "chief-financial-officer.toml",
+      "name": "Chief Financial Officer",
+      "description": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "chief-of-staff.toml",
+      "name": "Chief of Staff",
+      "description": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "china-e-commerce-operator.toml",
+      "name": "China E-Commerce Operator",
+      "description": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "china-market-localization-strategist.toml",
+      "name": "China Market Localization Strategist",
+      "description": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "civil-engineer.toml",
+      "name": "Civil Engineer",
+      "description": "Expert civil and structural engineer with global standards coverage — Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, IS, AIJ, and more. Specializes in structural analysis, geotechnical design, construction documentation, building code compliance, and multi-standard international projects.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "clinical-evidence-agent.toml",
+      "name": "       Clinical Evidence Agent",
+      "description": "Evidence standards and clinical credibility framework for AI agents",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "cloud-security-architect.toml",
+      "name": "Cloud Security Architect",
+      "description": "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, and GCP, and securing infrastructure-as-code pipelines from day one.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "cms-developer.toml",
+      "name": "CMS Developer",
+      "description": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "code-reviewer.toml",
+      "name": "Code Reviewer",
+      "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "codebase-archaeologist.toml",
+      "name": "Codebase Archaeologist",
+      "description": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "codebase-onboarding-engineer.toml",
+      "name": "Codebase Onboarding Engineer",
+      "description": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source code, tracing code paths, and stating only facts grounded in the code.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "compliance-auditor.toml",
+      "name": "Compliance Auditor",
+      "description": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence collection to certification.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "content-creator.toml",
+      "name": "Content Creator",
+      "description": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "corporate-training-designer.toml",
+      "name": "Corporate Training Designer",
+      "description": "Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology, blended learning program design, internal trainer development, leadership programs, and training effectiveness evaluation and continuous optimization.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "cross-border-e-commerce-specialist.toml",
+      "name": "Cross-Border E-Commerce Specialist",
+      "description": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "cultural-intelligence-strategist.toml",
+      "name": "Cultural Intelligence Strategist",
+      "description": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically across intersectional identities.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "customer-service.toml",
+      "name": "Customer Service",
+      "description": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "customer-success-manager.toml",
+      "name": "Customer Success Manager",
+      "description": "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal management — driving net revenue retention by turning customers into long-term partners who achieve measurable outcomes",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "data-consolidation-agent.toml",
+      "name": "Data Consolidation Agent",
+      "description": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "data-engineer.toml",
+      "name": "Data Engineer",
+      "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure. Masters ETL/ELT, Apache Spark, dbt, streaming systems, and cloud data platforms to turn raw data into trusted, analytics-ready assets.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "data-privacy-officer.toml",
+      "name": "Data Privacy Officer",
+      "description": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "database-optimizer.toml",
+      "name": "Database Optimizer",
+      "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases like Supabase and PlanetScale.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "database-reliability-engineer.toml",
+      "name": "Database Reliability Engineer",
+      "description": "Expert database reliability engineer (DBRE) — high availability and replication, automated failover, backup and point-in-time recovery, zero-downtime online schema migrations, connection pooling, and disaster-recovery drills. Focused on keeping data safe and available, not query tuning.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "deal-strategist.toml",
+      "name": "Deal Strategist",
+      "description": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles. Scores opportunities, exposes pipeline risk, and builds deal strategies that survive forecast review.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "desktop-app-engineer.toml",
+      "name": "Desktop App Engineer",
+      "description": "Expert desktop application engineer for Electron and Tauri — secure IPC and process isolation, code signing and notarization, auto-update pipelines, native OS integration, and resource-footprint discipline.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "developer-advocate.toml",
+      "name": "Developer Advocate",
+      "description": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimizing developer experience (DX), and driving platform adoption through authentic engineering engagement. Bridges product and engineering teams with external developers.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "developer-tooling-engineer.toml",
+      "name": "Developer Tooling Engineer",
+      "description": "Expert developer-tooling and CLI engineer — building command-line tools and internal developer platforms with great DX: intuitive command design, helpful errors, shell completions, fast startup, cross-platform distribution, and scriptable, composable interfaces.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "devops-automator.toml",
+      "name": "DevOps Automator",
+      "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "discovery-coach.toml",
+      "name": "Discovery Coach",
+      "description": "Coaches sales teams on elite discovery methodology — question design, current-state mapping, gap quantification, and call structure that surfaces real buying motivation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "document-generator.toml",
+      "name": "Document Generator",
+      "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "douyin-strategist.toml",
+      "name": "Douyin Strategist",
+      "description": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "drone-reality-mapping-specialist.toml",
+      "name": "Drone/Reality Mapping Specialist",
+      "description": "Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point clouds, and 3D meshes — bridging field capture and GIS-ready products.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "drupal-performance-engineer.toml",
+      "name": "Drupal Performance Engineer",
+      "description": "Expert Drupal 10/11 performance engineer specializing in Core Web Vitals, render and dynamic page caching, BigPipe, cache tags and contexts, database query and Views optimization, CSS/JS aggregation, responsive images and lazy loading, CDN integration, and opcache/PHP-FPM tuning for fast, audit-passing sites",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "drupal-shopping-cart-engineer.toml",
+      "name": "Drupal Shopping Cart Engineer",
+      "description": "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integration, checkout workflow design, order management, tax and promotion configuration, and high-reliability storefront delivery on Drupal 10/11",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "email-intelligence-engineer.toml",
+      "name": "Email Intelligence Engineer",
+      "description": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "email-marketing-strategist.toml",
+      "name": "Email Marketing Strategist",
+      "description": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences (welcome, nurture, reactivation, win-back, review, referral) grounded in 2025-2026 benchmarks, AI-driven personalization, and post-Apple MPP measurement.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "embedded-firmware-engineer.toml",
+      "name": "Embedded Firmware Engineer",
+      "description": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "esg-sustainability-officer.toml",
+      "name": "ESG & Sustainability Officer",
+      "description": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "evidence-collector.toml",
+      "name": "Evidence Collector",
+      "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "executive-summary-generator.toml",
+      "name": "Executive Summary Generator",
+      "description": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "experiment-tracker.toml",
+      "name": "Experiment Tracker",
+      "description": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making. Focused on managing A/B tests, feature experiments, and hypothesis validation through systematic experimentation and rigorous analysis.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "fedramp-rmf-compliance-engineer.toml",
+      "name": "FedRAMP & RMF Compliance Engineer",
+      "description": "Expert FedRAMP and NIST Risk Management Framework compliance engineer specializing in both FedRAMP authorization pathways — the traditional Rev5 path (NIST 800-53 Rev 5 control implementation, System Security Plans, 3PAO assessment, agency authorization) and the modernized FedRAMP 20x path (Key Security Indicators, automated machine-readable validation, compliance-as-code) — plus the ATO process, continuous monitoring (ConMon), POA&M management, FIPS 199 categorization, authorization boundary diagrams, OSCAL machine-readable packages, and cloud security compliance for government and regulated industries",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "feedback-synthesizer.toml",
+      "name": "Feedback Synthesizer",
+      "description": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights. Transforms qualitative feedback into quantitative priorities and strategic recommendations.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "feishu-integration-developer.toml",
+      "name": "Feishu Integration Developer",
+      "description": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform — proficient in Feishu bots, mini programs, approval workflows, Bitable (multidimensional spreadsheets), interactive message cards, Webhooks, SSO authentication, and workflow automation, building enterprise-grade collaboration and automation solutions within the Feishu ecosystem.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "filament-optimization-specialist.toml",
+      "name": "Filament Optimization Specialist",
+      "description": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on impactful structural changes — not just cosmetic tweaks.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "finance-tracker.toml",
+      "name": "Finance Tracker",
+      "description": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "financial-analyst.toml",
+      "name": "Financial Analyst",
+      "description": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw financial data into actionable business intelligence that drives strategic planning, investment decisions, and operational optimization.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "finops-engineer.toml",
+      "name": "FinOps Engineer",
+      "description": "Expert cloud cost engineer for AWS/GCP/Azure — cost allocation and tagging, rightsizing, commitment planning (reserved instances/savings plans), egress and storage optimization, and unit-economics dashboards that tie spend to business value.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "fp-a-analyst.toml",
+      "name": "FP&A Analyst",
+      "description": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, rolling forecasts, and strategic decision support. Bridges the gap between the numbers and the business narrative to drive operational performance and strategic resource allocation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "french-consulting-market-navigator.toml",
+      "name": "French Consulting Market Navigator",
+      "description": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "frontend-developer.toml",
+      "name": "Frontend Developer",
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "game-audio-engineer.toml",
+      "name": "Game Audio Engineer",
+      "description": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "game-designer.toml",
+      "name": "Game Designer",
+      "description": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design across all engines and genres",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "gaussdb-expert-engineer.toml",
+      "name": "GaussDB Expert Engineer",
+      "description": "Expert database specialist focusing on GaussDB OLTP — Huawei's self-developed enterprise-grade relational database (NOT GaussDB(DWS) OLAP, NOT GaussDB(for openGauss) cloud service, NOT GaussDB(for MySQL)). Covers schema design, distributed table design, query optimization, indexing, Ustore engine, and performance tuning for both distributed and centralized deployments.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "geoai-ml-engineer.toml",
+      "name": "GeoAI/ML Engineer",
+      "description": "Geospatial machine learning specialist who builds models for feature extraction, object detection, image segmentation, and land cover classification from satellite and aerial imagery.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "geographer.toml",
+      "name": "Geographer",
+      "description": "Expert in physical and human geography, climate systems, cartography, and spatial analysis — builds geographically coherent worlds where terrain, climate, resources, and settlement patterns make scientific sense",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "geoprocessing-specialist.toml",
+      "name": "Geoprocessing Specialist",
+      "description": "ArcPy and Python toolbox expert who automates spatial workflows — builds .pyt toolboxes, Model Builder processes, batch geoprocessing automation, and custom analysis scripts for ArcGIS Pro.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "gis-analyst.toml",
+      "name": "GIS Analyst",
+      "description": "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integrity across desktop and web environments.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "gis-qa-engineer.toml",
+      "name": "GIS QA Engineer",
+      "description": "Quality assurance specialist who validates geospatial data integrity — topology checks, metadata audits, CRS consistency, accuracy assessment, and compliance verification.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "git-workflow-master.toml",
+      "name": "Git Workflow Master",
+      "description": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasing, worktrees, and CI-friendly branch management.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "global-podcast-strategist.toml",
+      "name": "Global Podcast Strategist",
+      "description": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into authoritative audio brands that compound listeners and revenue over time on Spotify, Apple Podcasts, and YouTube.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "godot-gameplay-scripter.toml",
+      "name": "Godot Gameplay Scripter",
+      "description": "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "godot-multiplayer-engineer.toml",
+      "name": "Godot Multiplayer Engineer",
+      "description": "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "godot-shader-developer.toml",
+      "name": "Godot Shader Developer",
+      "description": "Godot 4 visual effects specialist - Masters the Godot Shading Language (GLSL-like), VisualShader editor, CanvasItem and Spatial shaders, post-processing, and performance optimization for 2D/3D effects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "government-digital-presales-consultant.toml",
+      "name": "Government Digital Presales Consultant",
+      "description": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solution design, bid document preparation, POC validation, compliance requirements (classified protection/cryptographic assessment/Xinchuang domestic IT), and stakeholder management — helping technical teams efficiently win government IT projects.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "grant-writer.toml",
+      "name": "Grant Writer",
+      "description": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "growth-hacker.toml",
+      "name": "Growth Hacker",
+      "description": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels for exponential business growth.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "healthcare-customer-service.toml",
+      "name": "Healthcare Customer Service",
+      "description": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "healthcare-innovation-strategist.toml",
+      "name": "       Healthcare Innovation Strategist",
+      "description": "Strategic narrative architect for healthcare founders operating at",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "healthcare-marketing-compliance-specialist.toml",
+      "name": "Healthcare Marketing Compliance Specialist",
+      "description": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management Measures, Drug Administration Law, and related regulations — covering pharmaceuticals, medical devices, medical aesthetics, health supplements, and internet healthcare across content review, risk control, platform rule interpretation, and patient privacy protection, helping enterprises conduct effective health marketing within legal boundaries.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "historian.toml",
+      "name": "Historian",
+      "description": "Expert in historical analysis, periodization, material culture, and historiography — validates historical coherence and enriches settings with authentic period detail grounded in primary and secondary sources",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "hospitality-guest-services.toml",
+      "name": "Hospitality Guest Services",
+      "description": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "hr-onboarding.toml",
+      "name": "HR Onboarding",
+      "description": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "identity-access-engineer.toml",
+      "name": "Identity & Access Engineer",
+      "description": "Expert identity engineer for OAuth 2.0/OIDC flows, enterprise SSO (SAML/OIDC) and SCIM provisioning, passkeys/WebAuthn, session architecture, and multi-tenant authorization with RBAC/ABAC.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "identity-graph-operator.toml",
+      "name": "Identity Graph Operator",
+      "description": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "image-prompt-engineer.toml",
+      "name": "Image Prompt Engineer",
+      "description": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation. Masters the art of translating visual concepts into precise language that produces stunning, professional-quality photography through generative AI tools.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "incident-responder.toml",
+      "name": "Incident Responder",
+      "description": "Digital forensics and incident response specialist who leads breach investigations, contains active threats, coordinates crisis response, and writes post-mortems that prevent recurrence.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "incident-response-commander.toml",
+      "name": "Incident Response Commander",
+      "description": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "inclusive-visuals-specialist.toml",
+      "name": "Inclusive Visuals Specialist",
+      "description": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "infrastructure-maintainer.toml",
+      "name": "Infrastructure Maintainer",
+      "description": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "instagram-curator.toml",
+      "name": "Instagram Curator",
+      "description": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "internationalization-engineer.toml",
+      "name": "Internationalization Engineer",
+      "description": "Expert i18n engineer for ICU MessageFormat, CLDR plural rules, RTL and bidirectional layouts, locale-aware date/number/currency formatting, string extraction pipelines, and pseudo-localization testing.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "investment-researcher.toml",
+      "name": "Investment Researcher",
+      "description": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Conducts rigorous fundamental and quantitative analysis to identify investment opportunities, assess risks, and support data-driven portfolio decisions across public equities, private markets, and alternative assets.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "iot-fleet-engineer.toml",
+      "name": "IoT Fleet Engineer",
+      "description": "Expert IoT and edge fleet engineer — device provisioning and identity, MQTT/telemetry pipelines, staged over-the-air (OTA) firmware updates with rollback, edge compute, and observability across fleets of unreliable, intermittently-connected devices.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "it-service-manager.toml",
+      "name": "IT Service Manager",
+      "description": "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem management, change control, SLA governance, CMDB maintenance, and continual service improvement — ensuring IT delivers reliable, measurable business value across any organization size",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "jira-workflow-steward.toml",
+      "name": "Jira Workflow Steward",
+      "description": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy across software teams.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "korean-business-navigator.toml",
+      "name": "Korean Business Navigator",
+      "description": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "kuaishou-strategist.toml",
+      "name": "Kuaishou Strategist",
+      "description": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "language-translator.toml",
+      "name": "Language Translator",
+      "description": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "legal-billing-time-tracking.toml",
+      "name": "Legal Billing & Time Tracking",
+      "description": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "legal-client-intake.toml",
+      "name": "Legal Client Intake",
+      "description": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "legal-compliance-checker.toml",
+      "name": "Legal Compliance Checker",
+      "description": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "legal-document-review.toml",
+      "name": "Legal Document Review",
+      "description": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "level-designer.toml",
+      "name": "Level Designer",
+      "description": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environmental narrative across all game engines",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "linkedin-content-creator.toml",
+      "name": "LinkedIn Content Creator",
+      "description": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "livestream-commerce-coach.toml",
+      "name": "Livestream Commerce Coach",
+      "description": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "loan-officer-assistant.toml",
+      "name": "Loan Officer Assistant",
+      "description": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "lsp-index-engineer.toml",
+      "name": "LSP/Index Engineer",
+      "description": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and semantic indexing",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "m-a-integration-manager.toml",
+      "name": "M&A Integration Manager",
+      "description": "Mergers and acquisitions integration specialist who designs and executes post-merger integration programs — covering Day 1 readiness, 100-day planning, synergy tracking, cultural integration, functional workstream coordination, and transition service agreement management.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "macos-spatial-metal-engineer.toml",
+      "name": "macOS Spatial/Metal Engineer",
+      "description": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "mcp-builder.toml",
+      "name": "MCP Builder",
+      "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "medical-billing-coding-specialist.toml",
+      "name": "Medical Billing & Coding Specialist",
+      "description": "Expert medical billing and coding specialist for ICD-10-CM/PCS, CPT, and HCPCS coding, claim submission, denial management, revenue cycle optimization, compliance auditing, and payer contract analysis — maximizing clean claim rates and revenue recovery for healthcare providers of all sizes",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "meeting-notes-specialist.toml",
+      "name": "Meeting Notes Specialist",
+      "description": "Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-section summary.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "minimal-change-engineer.toml",
+      "name": "Minimal Change Engineer",
+      "description": "Engineering specialist focused on minimum-viable diffs — fixes only what was asked, refuses scope creep, prefers three similar lines over a premature abstraction. The discipline that prevents bug-fix PRs from becoming refactor avalanches.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "mobile-app-builder.toml",
+      "name": "Mobile App Builder",
+      "description": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "mobile-release-engineer.toml",
+      "name": "Mobile Release Engineer",
+      "description": "Expert mobile release and distribution engineer for iOS and Android — code signing, provisioning, fastlane pipelines, App Store Connect and Play Console submission, phased rollouts, and crash-triaged release health.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "model-qa-specialist.toml",
+      "name": "Model QA Specialist",
+      "description": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "multi-agent-systems-architect.toml",
+      "name": "Multi-Agent Systems Architect",
+      "description": "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines — covering topology selection, context management, inter-agent trust, failure recovery, human-in-the-loop gating, and observability for production-grade agent systems.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "multi-platform-publisher.toml",
+      "name": "Multi-Platform Publisher",
+      "description": "Expert orchestrator for one-click Chinese blog publishing. Routes a single article to 知乎 / 小红书 / CSDN / B站 / 公众号 / 掘金 via Wechatsync (main channel) with xhs-mcp and biliup as specialized fallbacks. Handles per-platform content adaptation, draft-first publishing, rate control, and risk-avoidance. Does NOT auto-publish — always stops at draft for human review.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "narrative-designer.toml",
+      "name": "Narrative Designer",
+      "description": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and environmental storytelling across all game engines",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "narratologist.toml",
+      "name": "Narratologist",
+      "description": "Expert in narrative theory, story structure, character arcs, and literary analysis — grounds advice in established frameworks from Propp to Campbell to modern narratology",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "network-engineer.toml",
+      "name": "Network Engineer",
+      "description": "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, firewalling, and troubleshooting.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "offer-lead-gen-strategist.toml",
+      "name": "Offer & Lead Gen Strategist",
+      "description": "Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale. Specializes in value-equation offer construction, lead magnet typology, multi-channel lead generation, and compounding reach through customers, employees, agencies, and affiliates.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "operations-manager.toml",
+      "name": "Operations Manager",
+      "description": "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, KPI governance, vendor management, and organizational efficiency — turning operational complexity into repeatable, measurable performance.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "organizational-psychologist.toml",
+      "name": "Organizational Psychologist",
+      "description": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "orgscript-engineer.toml",
+      "name": "OrgScript Engineer",
+      "description": "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "outbound-strategist.toml",
+      "name": "Outbound Strategist",
+      "description": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven personalization — not volume.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "paid-media-auditor.toml",
+      "name": "Paid Media Auditor",
+      "description": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account structure, tracking, bidding, creative, audiences, and competitive positioning. Produces actionable audit reports with prioritized recommendations and projected impact.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "paid-social-strategist.toml",
+      "name": "Paid Social Strategist",
+      "description": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat. Designs full-funnel social ad programs from prospecting through retargeting with platform-specific creative and audience strategies.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "payments-billing-engineer.toml",
+      "name": "Payments & Billing Engineer",
+      "description": "Expert payments engineer for PSP integrations (Stripe, Adyen, Braintree, PayPal), idempotent payment flows, webhook processing, subscription billing, SCA/3DS, PCI scope reduction, and financial reconciliation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "penetration-tester.toml",
+      "name": "Penetration Tester",
+      "description": "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessments across networks, web applications, and cloud infrastructure.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "performance-benchmarker.toml",
+      "name": "Performance Benchmarker",
+      "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "persona-walkthrough-specialist.toml",
+      "name": "Persona Walkthrough Specialist",
+      "description": "Simulate cognitive walkthroughs of web pages from a defined persona's psychological perspective — captures emotional reactions and rational thought at each scroll position, then delivers structured CRO reports grounded in LIFT, Cialdini, and Fogg frameworks",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "personal-growth-mentor.toml",
+      "name": "Personal Growth Mentor",
+      "description": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "pipeline-analyst.toml",
+      "name": "Pipeline Analyst",
+      "description": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching. Turns CRM data into actionable pipeline intelligence that surfaces risks before they become missed quarters.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "podcast-strategist.toml",
+      "name": "Podcast Strategist",
+      "description": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ppc-campaign-strategist.toml",
+      "name": "PPC Campaign Strategist",
+      "description": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture across Google, Microsoft, and Amazon ad platforms. Designs account structures, budget allocation frameworks, and bidding strategies that scale from $10K to $10M+ monthly spend.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "pr-communications-manager.toml",
+      "name": "PR & Communications Manager",
+      "description": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "pricing-analyst.toml",
+      "name": "Pricing Analyst",
+      "description": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin optimization — turning pricing from guesswork into a data-driven competitive advantage.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "privacy-engineer.toml",
+      "name": "Privacy Engineer",
+      "description": "Expert privacy engineer who implements privacy in code — PII discovery and classification, data minimization, consent enforcement at the API layer, automated DSAR and deletion across services, pseudonymization/tokenization, and retention automation. Builds the technical controls a privacy policy only promises.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "private-domain-operator.toml",
+      "name": "Private Domain Operator",
+      "description": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "product-manager.toml",
+      "name": "Product Manager",
+      "description": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement. Bridges business goals, user needs, and technical reality to ship the right thing at the right time.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "programmatic-display-buyer.toml",
+      "name": "Programmatic & Display Buyer",
+      "description": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms, partner media (newsletters, sponsored content), and ABM display strategies via platforms like Demandbase and 6Sense.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "project-shepherd.toml",
+      "name": "Project Shepherd",
+      "description": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment. Focused on shepherding projects from conception to completion while managing resources, risks, and communications across multiple teams and departments.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "prompt-engineer.toml",
+      "name": "Prompt Engineer",
+      "description": "Specialist in crafting, testing, and systematically optimizing prompts for LLMs — turning vague instructions into reliable, production-grade AI behaviors.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "proposal-strategist.toml",
+      "name": "Proposal Strategist",
+      "description": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives. Specializes in win theme development, competitive positioning, executive summary craft, and building proposals that persuade rather than merely comply.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "psychologist.toml",
+      "name": "Psychologist",
+      "description": "Expert in human behavior, personality theory, motivation, and cognitive patterns — builds psychologically credible characters and interactions grounded in clinical and research frameworks",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "rag-pipeline-engineer.toml",
+      "name": "RAG Pipeline Engineer",
+      "description": "Production RAG specialist focused on chunking strategy, retrieval quality, hybrid search, re-ranking, and eval-driven iteration. Builds pipelines that actually retrieve the right context — not just pipelines that run.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "rapid-prototyper.toml",
+      "name": "Rapid Prototyper",
+      "description": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "real-estate-buyer-seller.toml",
+      "name": "Real Estate Buyer & Seller",
+      "description": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "reality-checker.toml",
+      "name": "Reality Checker",
+      "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "realtime-collaboration-engineer.toml",
+      "name": "Realtime Collaboration Engineer",
+      "description": "Expert realtime systems engineer for WebSocket/SSE infrastructure, presence, CRDT and OT-based collaborative editing, offline-first sync engines, and fan-out scaling with reconnect-safe protocols.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "recruitment-specialist.toml",
+      "name": "Recruitment Specialist",
+      "description": "Expert recruitment operations and talent acquisition specialist — skilled in China's major hiring platforms, talent assessment frameworks, and labor law compliance. Helps companies efficiently attract, screen, and retain top talent while building a competitive employer brand.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "reddit-community-builder.toml",
+      "name": "Reddit Community Builder",
+      "description": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building. Masters Reddit culture navigation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "report-distribution-agent.toml",
+      "name": "Report Distribution Agent",
+      "description": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "resume-tailor.toml",
+      "name": "Resume Tailor",
+      "description": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "retail-customer-returns.toml",
+      "name": "Retail Customer Returns",
+      "description": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "roblox-avatar-creator.toml",
+      "name": "Roblox Avatar Creator",
+      "description": "Roblox UGC and avatar pipeline specialist - Masters Roblox's avatar system, UGC item creation, accessory rigging, texture standards, and the Creator Marketplace submission pipeline",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "roblox-experience-designer.toml",
+      "name": "Roblox Experience Designer",
+      "description": "Roblox platform UX and monetization specialist - Masters engagement loop design, DataStore-driven progression, Roblox monetization systems (Passes, Developer Products, UGC), and player retention for Roblox experiences",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "roblox-systems-scripter.toml",
+      "name": "Roblox Systems Scripter",
+      "description": "Roblox platform engineering specialist - Masters Luau, the client-server security model, RemoteEvents/RemoteFunctions, DataStore, and module architecture for scalable Roblox experiences",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sales-coach.toml",
+      "name": "Sales Coach",
+      "description": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy. Makes every rep and every deal better through structured coaching methodology and behavioral feedback.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sales-data-extraction-agent.toml",
+      "name": "Sales Data Extraction Agent",
+      "description": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sales-engineer.toml",
+      "name": "Sales Engineer",
+      "description": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes. Wins the technical decision so the deal can close.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sales-outreach.toml",
+      "name": "Sales Outreach",
+      "description": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, and pipeline management — combining data-driven targeting with genuine relationship-building to open doors and close deals",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "salesforce-architect.toml",
+      "name": "Salesforce Architect",
+      "description": "Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "search-query-analyst.toml",
+      "name": "Search Query Analyst",
+      "description": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping. Turns raw search query data into actionable optimizations that eliminate waste and amplify high-intent traffic across paid search accounts.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "search-relevance-engineer.toml",
+      "name": "Search Relevance Engineer",
+      "description": "Expert search engineer for Elasticsearch and OpenSearch — index and analyzer design, BM25 query tuning, hybrid lexical+vector retrieval, and judgment-based relevance evaluation with nDCG and online experiments.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "secrets-credential-hygiene-engineer.toml",
+      "name": "Secrets & Credential Hygiene Engineer",
+      "description": "Owns the full lifecycle of secrets and credentials — detection, prevention, vaulting, rotation, and leak response — so an application runs on short-lived, least-privilege credentials that are never in the code and are already rotated by the time a leak is found.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "section-508-accessibility-specialist.toml",
+      "name": "Section 508 Accessibility Specialist",
+      "description": "Expert U.S. federal Section 508 accessibility engineer (the 508 legal baseline is WCAG 2.0 Level AA; WCAG 2.1/2.2 AA are recommended best practice, and ADA Title II requires WCAG 2.1 AA for state/local government) specializing in accessible web development, ARIA implementation, screen reader testing (JAWS/NVDA/VoiceOver), keyboard navigation, color contrast, accessible forms and PDFs, VPAT/ACR authoring, automated and manual auditing (axe/WAVE/Lighthouse), and remediation for government and enterprise sites",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "security-architect.toml",
+      "name": "Security Architect",
+      "description": "Expert security architect specializing in threat modeling, secure-by-design architecture, trust-boundary analysis, defense-in-depth, and risk-based security reviews across web, API, cloud-native, and distributed systems. Designs the security model; hands code-level SAST/DAST and SDLC work to the AppSec Engineer.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "senior-developer.toml",
+      "name": "Senior Developer",
+      "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "senior-project-manager.toml",
+      "name": "Senior Project Manager",
+      "description": "Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec requirements",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "senior-secops-engineer.toml",
+      "name": "Senior SecOps Engineer",
+      "description": "Defensive application security specialist who scans every code submission for secrets and sensitive data exposure before anything else, then implements or audits security controls following the organization's security standard — covering authentication, authorization, tokens, cookies, HTTP headers, CORS, rate limiting, CSP, secrets management, input validation, and secure logging.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "seo-specialist.toml",
+      "name": "SEO Specialist",
+      "description": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth. Drives sustainable traffic through data-driven search strategies.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "short-video-editing-coach.toml",
+      "name": "Short-Video Editing Coach",
+      "description": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "social-media-strategist.toml",
+      "name": "Social Media Strategist",
+      "description": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages real-time engagement, and develops thought leadership strategies.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "software-architect.toml",
+      "name": "Software Architect",
+      "description": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable, maintainable systems.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "solidity-smart-contract-engineer.toml",
+      "name": "Solidity Smart Contract Engineer",
+      "description": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns, DeFi protocol development, and security-first contract design across Ethereum and L2 chains.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "solution-engineer.toml",
+      "name": "Solution Engineer",
+      "description": "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-concepts, and technical validations across the full Esri and open-source stack.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sovereign-health-systems-agent.toml",
+      "name": "       Sovereign Health Systems Agent",
+      "description": "Government health mandate engagement framework for AI agents",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "spatial-data-engineer.toml",
+      "name": "Spatial Data Engineer",
+      "description": "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets — format conversion, CRS reprojection, attribute normalization, and automated pipelines.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "spatial-data-scientist.toml",
+      "name": "Spatial Data Scientist",
+      "description": "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive analytics to geospatial data — finding patterns that aren't visible on a map.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sprint-prioritizer.toml",
+      "name": "Sprint Prioritizer",
+      "description": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation. Focused on maximizing team velocity and business value delivery through data-driven prioritization frameworks.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "sre-site-reliability-engineer.toml",
+      "name": "SRE (Site Reliability Engineer)",
+      "description": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "statistician.toml",
+      "name": "Statistician",
+      "description": "Expert in quantitative research methodology, experimental design, and statistical inference — pressure-tests claims, designs sound studies, and separates real signal from noise, chance, and bias",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "strategy-duel-agent.toml",
+      "name": "Strategy Duel Agent",
+      "description": "Conducts live strategy duels using game theory and the 36 Chinese stratagems",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "studio-operations.toml",
+      "name": "Studio Operations",
+      "description": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination. Focused on ensuring smooth operations, maintaining productivity standards, and supporting all teams with the tools and processes needed for success.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "studio-producer.toml",
+      "name": "Studio Producer",
+      "description": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management. Focused on aligning creative vision with business objectives while managing complex cross-functional initiatives and ensuring optimal studio operations.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "study-abroad-advisor.toml",
+      "name": "Study Abroad Advisor",
+      "description": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "supply-chain-strategist.toml",
+      "name": "Supply Chain Strategist",
+      "description": "Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply chain digitalization. Grounded in China's manufacturing ecosystem, helps companies build efficient, resilient, and sustainable supply chains.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "support-responder.toml",
+      "name": "Support Responder",
+      "description": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "tax-strategist.toml",
+      "name": "Tax Strategist",
+      "description": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic tax planning. Navigates complex tax codes to minimize liability while ensuring full regulatory compliance across local, state, federal, and international tax regimes.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "technical-artist.toml",
+      "name": "Technical Artist",
+      "description": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "technical-consultant.toml",
+      "name": "Technical Consultant",
+      "description": "Strategic GIS advisor who translates business problems into geospatial solutions — gap analysis, technology roadmaps, RFP responses, and digital transformation strategy across Esri and open-source ecosystems.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "technical-writer.toml",
+      "name": "Technical Writer",
+      "description": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts into clear, accurate, and engaging docs that developers actually read and use.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "terminal-integration-specialist.toml",
+      "name": "Terminal Integration Specialist",
+      "description": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "test-automation-engineer.toml",
+      "name": "Test Automation Engineer",
+      "description": "Expert end-to-end test automation engineer for Playwright and Cypress — resilient selectors, flake elimination, isolated test data, CI parallelization, and trace-driven failure debugging.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "test-results-analyzer.toml",
+      "name": "Test Results Analyzer",
+      "description": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "threat-detection-engineer.toml",
+      "name": "Threat Detection Engineer",
+      "description": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tuning, and detection-as-code pipelines for security operations teams.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "threat-intelligence-analyst.toml",
+      "name": "Threat Intelligence Analyst",
+      "description": "Cyber threat intelligence specialist who tracks adversary groups, maps attack campaigns to MITRE ATT&CK, produces actionable intelligence reports, and builds detection rules that catch real threats.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "tiktok-strategist.toml",
+      "name": "TikTok Strategist",
+      "description": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture and features for brand growth.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "tool-evaluator.toml",
+      "name": "Tool Evaluator",
+      "description": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "tracking-measurement-specialist.toml",
+      "name": "Tracking & Measurement Specialist",
+      "description": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn Insight Tag, and server-side implementations. Ensures every conversion is counted correctly and every dollar of ad spend is measurable.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "trend-researcher.toml",
+      "name": "Trend Researcher",
+      "description": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment. Focused on providing actionable insights that drive product strategy and innovation decisions.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "twitter-engager.toml",
+      "name": "Twitter Engager",
+      "description": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth. Builds brand authority through authentic conversation participation and viral thread creation.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ui-designer.toml",
+      "name": "UI Designer",
+      "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent, accessible user interfaces that enhance UX and reflect brand identity",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unity-architect.toml",
+      "name": "Unity Architect",
+      "description": "Data-driven modularity specialist - Masters ScriptableObjects, decoupled systems, and single-responsibility component design for scalable Unity projects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unity-editor-tool-developer.toml",
+      "name": "Unity Editor Tool Developer",
+      "description": "Unity editor automation specialist - Masters custom EditorWindows, PropertyDrawers, AssetPostprocessors, ScriptedImporters, and pipeline automation that saves teams hours per week",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unity-multiplayer-engineer.toml",
+      "name": "Unity Multiplayer Engineer",
+      "description": "Networked gameplay specialist - Masters Netcode for GameObjects, Unity Gaming Services (Relay/Lobby), client-server authority, lag compensation, and state synchronization",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unity-shader-graph-artist.toml",
+      "name": "Unity Shader Graph Artist",
+      "description": "Visual effects and material specialist - Masters Unity Shader Graph, HLSL, URP/HDRP rendering pipelines, and custom pass authoring for real-time visual effects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unreal-multiplayer-architect.toml",
+      "name": "Unreal Multiplayer Architect",
+      "description": "Unreal Engine networking specialist - Masters Actor replication, GameMode/GameState architecture, server-authoritative gameplay, network prediction, and dedicated server setup for UE5",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unreal-systems-engineer.toml",
+      "name": "Unreal Systems Engineer",
+      "description": "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unreal-technical-artist.toml",
+      "name": "Unreal Technical Artist",
+      "description": "Unreal Engine visual pipeline specialist - Masters the Material Editor, Niagara VFX, Procedural Content Generation, and the art-to-engine pipeline for UE5 projects",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "unreal-world-builder.toml",
+      "name": "Unreal World Builder",
+      "description": "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "uswds-developer.toml",
+      "name": "USWDS Developer",
+      "description": "Expert U.S. Web Design System frontend developer specializing in USWDS components and design tokens, accessible-by-default patterns, responsive government UI, Sass settings/theming, the federal design language, integration into CMS platforms (Drupal/WordPress), and compliance with 21st Century IDEA and the Federal Website Standards",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ux-architect.toml",
+      "name": "UX Architect",
+      "description": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "ux-researcher.toml",
+      "name": "UX Researcher",
+      "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights. Provides actionable research findings that improve product usability and user satisfaction",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "video-optimization-specialist.toml",
+      "name": "Video Optimization Specialist",
+      "description": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "video-streaming-engineer.toml",
+      "name": "Video Streaming Engineer",
+      "description": "Expert video streaming engineer for adaptive bitrate delivery — HLS/DASH packaging, ffmpeg transcode ladders, CMAF low-latency, DRM, CDN delivery, and QoE-driven player tuning.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "visionos-spatial-engineer.toml",
+      "name": "visionOS Spatial Engineer",
+      "description": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "visual-storyteller.toml",
+      "name": "Visual Storyteller",
+      "description": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design. Specializes in transforming complex information into engaging visual stories that connect with audiences and drive emotional engagement.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "voice-ai-integration-engineer.toml",
+      "name": "Voice AI Integration Engineer",
+      "description": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through preprocessing, transcript cleanup, subtitle generation, speaker diarization, and structured downstream integration into apps, APIs, and CMS platforms.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "web-gis-developer.toml",
+      "name": "Web GIS Developer",
+      "description": "Full-stack web GIS engineer who builds interactive mapping applications — MapLibre GL JS, ArcGIS JS API, Leaflet, real-time dashboards, REST API integration, and geospatial web services.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "webassembly-engineer.toml",
+      "name": "WebAssembly Engineer",
+      "description": "Expert WebAssembly engineer — compiling Rust/C++/Go to Wasm, JS interop and the boundary marshalling cost, WASI and server-side runtimes (Wasmtime/Wasmer), the component model, and near-native performance tuning.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "wechat-mini-program-developer.toml",
+      "name": "WeChat Mini Program Developer",
+      "description": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API integration, payment systems, subscription messaging, and the full WeChat ecosystem.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "wechat-official-account-manager.toml",
+      "name": "WeChat Official Account Manager",
+      "description": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "weibo-strategist.toml",
+      "name": "Weibo Strategist",
+      "description": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "whimsy-injector.toml",
+      "name": "Whimsy Injector",
+      "description": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences. Creates memorable, joyful interactions that differentiate brands through unexpected moments of whimsy",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "wordpress-performance-engineer.toml",
+      "name": "WordPress Performance Engineer",
+      "description": "Expert WordPress performance engineer specializing in Core Web Vitals, object caching (Redis/Memcached), page caching, database and WP_Query optimization, the Transients API, asset minification/deferral/critical CSS, image optimization and lazy loading, CDN integration, plugin performance auditing, and PHP-FPM/opcache tuning for fast, audit-passing sites",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "wordpress-shopping-cart-engineer.toml",
+      "name": "WordPress Shopping Cart Engineer",
+      "description": "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integration, checkout customization, order management, tax and coupon configuration, and conversion-optimized storefront delivery on WordPress",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "workflow-architect.toml",
+      "name": "Workflow Architect",
+      "description": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction — covering happy paths, all branch conditions, failure modes, recovery paths, handoff contracts, and observable states to produce build-ready specs that agents can implement against and QA can test against.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "workflow-optimizer.toml",
+      "name": "Workflow Optimizer",
+      "description": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "x-twitter-intelligence-analyst.toml",
+      "name": "X/Twitter Intelligence Analyst",
+      "description": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "xiaohongshu-specialist.toml",
+      "name": "Xiaohongshu Specialist",
+      "description": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "xr-cockpit-interaction-specialist.toml",
+      "name": "XR Cockpit Interaction Specialist",
+      "description": "Specialist in designing and developing immersive cockpit-based control systems for XR environments",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "xr-immersive-developer.toml",
+      "name": "XR Immersive Developer",
+      "description": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "xr-interface-architect.toml",
+      "name": "XR Interface Architect",
+      "description": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "zhihu-strategist.toml",
+      "name": "Zhihu Strategist",
+      "description": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement. Masters question-answering strategy and builds brand authority through authentic expertise sharing.",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    },
+    {
+      "file": "zk-steward.toml",
+      "name": "ZK Steward",
+      "description": "\"Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support.\"",
+      "keys": [
+        "name",
+        "description",
+        "developer_instructions"
+      ]
+    }
+  ],
+  "automations": [
+    {
+      "id": "minimax-h3-prompt-skill",
+      "name": "检查 MiniMax H3 Prompt Skill 更新",
+      "kind": "heartbeat",
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO;BYHOUR=9;BYMINUTE=0",
+      "prompt": "检查 MiniMax-AI/MiniMax-H3 官方仓库中 skills/h3-prompt-writing 的最新内容，并与本机 C:\\Users\\Administra\\.codex\\skills\\h3-prompt-writing 比较。核对 SKILL.md、agents/openai.yaml、references/base-en.txt、references/ref-en.txt 的文件列表与 Git blob 哈希；同时审查新增脚本、依赖、网络调用、遥测和凭据需求。agents/openai.yaml 中 interface.short_description 的本地值“MiniMax H3 视频生成  |  多模态提示词编写”是用户明确批准的持久本地覆盖：比较更新时忽略该字段的预期差异，但仍检查 display_name、default_prompt 和其余内容。若除该本地覆盖外无变化，简洁报告“本周无更新”；若有变化，列出上游提交或文件差异、对 T2VA/I2VA/FL2VA/L2VA/Ref2VA 格式的影响和建议，但不要自动安装或覆盖，必须等待用户确认后再更新。",
+      "cwds": null
+    }
+  ]
+}
