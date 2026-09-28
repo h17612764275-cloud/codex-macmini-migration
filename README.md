@@ -2,29 +2,29 @@
 
 **把这个页面交给新 Mac 的 Codex，从这里接手。**
 
-这是私人迁移入口。完整文件在下面的 Release 附件里，仓库代码区用于在线阅读说明。快照日期：2026-09-28；完整 ZIP 为 **948,200,541 字节（约 904 MiB）**。
+这是公开迁移入口，无需 GitHub 登录即可阅读说明和下载附件。完整文件在下面的 Release 附件里，仓库代码区用于在线阅读说明。快照日期：2026-09-28；完整 ZIP 为 **948,200,541 字节（约 904 MiB）**。
 
 ## 在新 Mac 上怎么开始
 
-1. 登录有权限的 GitHub 账号（所有者 `h17612764275-cloud`）。浏览器能打开本页，不代表 Codex 的 GitHub 连接器或终端已登录；读不了私有仓库时，先完成相应登录。不要把仓库改公开来绕过登录。
+1. 直接打开本页，无需把仓库加入 GitHub 连接器授权范围。新 Mac 的 Codex 可使用网页读取或终端下载公开文件；如果某个连接器仍要求登录，使用网页或下方下载命令。
 2. 打开 [完整迁移包下载页](https://github.com/h17612764275-cloud/codex-macmini-migration/releases/tag/migration-2026-09-28)，在 **Assets** 下载 `macmini-codex-xinxudao-20260928.zip` 和 `SHA256SUMS.txt`。
 3. 校验、解压，将解压后的整个目录交给 Codex。读取 [给新 Mac 的第一条指令](docs/给新Mac的第一条指令.md)，继续执行 [Mac 配置指南](docs/01-Mac配置指南.md)。
 
 **不要下载 GitHub 自动生成的 “Source code (zip)” 当作完整包，也不要只 clone 这个仓库。** 那些只有在线说明，没有完整 Skills、项目素材和项目 Git 历史。
 
-终端已有 GitHub CLI 且登录成功时，可在一个新的空目录下载：
+在 Mac 终端的一个新的空目录里，也可以直接下载，无需 GitHub CLI 或账号授权：
 
 ```sh
-gh auth status
-gh release download migration-2026-09-28 --repo h17612764275-cloud/codex-macmini-migration --pattern 'macmini-codex-xinxudao-20260928.zip' --pattern 'SHA256SUMS.txt'
+curl --fail --location --output macmini-codex-xinxudao-20260928.zip 'https://github.com/h17612764275-cloud/codex-macmini-migration/releases/download/migration-2026-09-28/macmini-codex-xinxudao-20260928.zip'
+curl --fail --location --output SHA256SUMS.txt 'https://github.com/h17612764275-cloud/codex-macmini-migration/releases/download/migration-2026-09-28/SHA256SUMS.txt'
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-没有 GitHub CLI 时用已登录浏览器下载即可。只在校验输出 `OK` 后解压到新目录；解压后进入 `Macmini-Codex-心绪岛迁移包`，有 Python 3 时运行 `python3 verify_bundle.py`，预期 `PASS: 4532 files checked`。目录已经存在时先比较，不覆盖。ZIP 内原文件名仍是中文；SHA256SUMS 对应上面的英文下载文件名，内容与本地已核验原包相同。
+也可以直接用浏览器下载。只在校验输出 `OK` 后解压到新目录；解压后进入 `Macmini-Codex-心绪岛迁移包`，有 Python 3 时运行 `python3 verify_bundle.py`，预期 `PASS: 4532 files checked`。目录已经存在时先比较，不覆盖。ZIP 内原文件名仍是中文；SHA256SUMS 对应上面的英文下载文件名，内容与本地已核验原包相同。
 
 ## 给新 Mac 的 Codex 的一句话
 
-> 请读取这个仓库的 README 和接手文档，帮我把 Release 中的 Codex 配置、个人 Skills 与心绪岛项目恢复到这台 Mac。先核验文件和当前环境；遇到私有仓库访问问题先协助登录。迁移环境不等于批准心绪岛 UI 编码。
+> 请读取这个仓库的 README 和接手文档，帮我把 Release 中的 Codex 配置、个人 Skills 与心绪岛项目恢复到这台 Mac。先从公开 Release 下载并核验文件，再核对当前环境；无需办理此仓库的 GitHub 连接器授权。迁移环境不等于批准心绪岛 UI 编码。
 
 ## 里面有什么
 
